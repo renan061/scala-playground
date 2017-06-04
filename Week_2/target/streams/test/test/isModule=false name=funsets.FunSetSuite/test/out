@@ -1,0 +1,13 @@
+[0m[[0minfo[0m] [0m[32mFunSetSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- string take[0m[0m
+[0m[[0minfo[0m] [0m[32m- adding ints[0m[0m
+[0m[[0minfo[0m] [0m[32m- contains is implemented[0m[0m
+[0m[[0minfo[0m] [0m[32m- singletonSet(1) contains 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- test singletonSet[0m[0m
+[0m[[0minfo[0m] [0m[32m- test union[0m[0m
+[0m[[0minfo[0m] [0m[32m- test intersect[0m[0m
+[0m[[0minfo[0m] [0m[32m- test diff[0m[0m
+[0m[[0minfo[0m] [0m[32m- test set filter[0m[0m
+[0m[[0minfo[0m] [0m[32m- test for all[0m[0m
+[0m[[0minfo[0m] [0m[32m- test exists[0m[0m
+[0m[[0minfo[0m] [0m[32m- test map[0m[0m
