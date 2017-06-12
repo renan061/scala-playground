@@ -1,5 +1,5 @@
 [0m[[0mdebug[0m] [0mThe patmat.Huffman$ source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m	until, w.[0m
+[0m[[0mdebug[0m] [0m	until, w, main.[0m
 [0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
 [0m[[0mdebug[0m] [0mFiles invalidated by inheriting from (external) patmat.Huffman$: Set(); now invalidating by inheritance (internally).[0m
 [0m[[0mdebug[0m] [0mGetting direct dependencies of all sources transitively invalidated by inheritance.[0m
@@ -11,7 +11,7 @@
 [0m[[0mdebug[0m] [0m	added: Set()[0m
 [0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
-[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set(NamesChange(patmat.Huffman$,ModifiedNames(regularNames = until, w, implicitNames = )))[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set(NamesChange(patmat.Huffman$,ModifiedNames(regularNames = until, w, main, implicitNames = )))[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[0m

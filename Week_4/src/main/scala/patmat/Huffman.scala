@@ -184,7 +184,21 @@ object Huffman {
     * This function decodes the bit sequence `bits` using the code tree `tree` and returns
     * the resulting list of characters.
     */
-  def decode(tree: CodeTree, bits: List[Bit]): List[Char] = ???
+  def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
+    def char(tree: CodeTree, bits: List[Bit]): (Char, List[Bit]) =
+      tree match {
+        case Leaf(c, _) => (c, bits)
+        case Fork(l, r, _, _) =>
+          if (bits.head == 0) char(l, bits.tail)
+          else char(r, bits.tail)
+      }
+
+    if (bits.isEmpty) Nil
+    else {
+      val (c, bs) = char(tree, bits)
+      c :: decode(tree, bs)
+    }
+  }
 
   /**
     * A Huffman coding tree for the French language.
@@ -202,7 +216,7 @@ object Huffman {
   /**
     * Write a function that returns the decoded secret
     */
-  def decodedSecret: List[Char] = ???
+  def decodedSecret: List[Char] = decode(frenchCode, secret)
 
 
   // Part 4a: Encoding using Huffman tree
@@ -211,7 +225,25 @@ object Huffman {
     * This function encodes `text` using the code tree `tree`
     * into a sequence of bits.
     */
-  def encode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
+  def encode(tree: CodeTree)(text: List[Char]): List[Bit] = {
+    def aux(cond: Boolean, left: List[Bit], right: List[Bit]): List[Bit] =
+      if (cond) 0 :: left else 1 :: right
+
+    def bits(tree: CodeTree, char: Char): List[Bit] =
+      tree match {
+        case Fork(l @ Fork(_, _, cs, _), r, _, _) =>
+          aux(cs.contains(char), bits(l, char), bits(r, char))
+        case Fork(l, r @ Fork(_, _, cs, _), _, _) =>
+          aux(cs.contains(char), bits(r, char), bits(l, char))
+        case Fork(Leaf(c, _), r, _, _) =>
+          aux(c == char, Nil, bits(r, char))
+        case Fork(l, Leaf(c, _), _, _) =>
+          aux(c == char, bits(l, char), Nil)
+        case _ => Nil
+      }
+
+    if (text.isEmpty) Nil else bits(tree, text.head) ::: encode(tree)(text.tail)
+  }
 
   // Part 4b: Encoding using code table
 
@@ -247,4 +279,8 @@ object Huffman {
     * and then uses it to perform the actual encoding.
     */
   def quickEncode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
+
+  def main(args: Array[String]): Unit = {
+    println(decodedSecret)
+  }
 }
