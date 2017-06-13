@@ -7,3 +7,14 @@
 [0m[[0minfo[0m] [0m[32m- singleton[0m[0m
 [0m[[0minfo[0m] [0m[32m- combine of some leaf list[0m[0m
 [0m[[0minfo[0m] [0m[32m- decode and encode a very short text should be identity[0m[0m
+[0m[[0minfo[0m] [0m[32m- decode and encode[0m[0m
+[0m[[0minfo[0m] [0m[32m- quickEncode[0m[0m
+[0m[[0minfo[0m] [0m[32m- misc 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [times][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [makeOrderedLeafList][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [singleton][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [combine][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [decode] and [encode][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [codeBits][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [convert][0m[0m
+[0m[[0minfo[0m] [0m[32m- Test function [quickEncode][0m[0m
